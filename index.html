@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-Deportes: ropa y accesorios deportivos.">
+    <title>E-Deportes | Tienda deportiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="#inicio"><span class="brand-mark">▰</span> E<span>DEPORTES</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+        <nav id="mainNav">
+            <a href="#inicio">Inicio</a><a href="#categorias">Categorías</a><a href="#productos">Productos</a><a
+                href="#ofertas">Ofertas</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-btn" id="themeToggle" title="Cambiar tema">◐</button>
+            <button class="cart-button" id="openCart">🛒 <span>Carrito</span><b id="cartCount">0</b></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow">EQUÍPATE · ENTRENA · SUPERA TUS LÍMITES</p>
+                <h1>EL DEPORTE<br><span>ES TU JUEGO.</span></h1>
+                <p>Encuentra la indumentaria y los accesorios que te impulsan a darlo todo en cada entrenamiento.</p>
+                <a class="primary-btn" href="#productos">VER PRODUCTOS <span>↗</span></a>
+            </div>
+            <div class="hero-art" aria-label="Ilustración deportiva">
+                <div class="orb orb-one"></div>
+                <div class="orb orb-two"></div>
+                <div class="hero-ball">⚽</div>
+                <div class="hero-tag">MOVE<br>FORWARD<span>®</span></div>
+                <div class="hero-number">01</div>
+            </div>
+        </section>
+
+        <section class="category-strip" id="categorias">
+            <div class="section-kicker">EXPLORA POR CATEGORÍA</div>
+            <div class="category-list">
+                <button class="category active" data-category="Todos"><span>◉</span> Todo</button>
+                <button class="category" data-category="Calzado"><span>👟</span> Calzado</button>
+                <button class="category" data-category="Balones"><span>⚽</span> Balones</button>
+                <button class="category" data-category="Accesorios"><span>🥽</span> Accesorios</button>
+                <button class="category" data-category="Uniformes"><span>👕</span> Uniformes</button>
+                <button class="category" data-category="Entrenamiento"><span>🏋</span> Entrenamiento</button>
+            </div>
+        </section>
+
+        <section class="products-section" id="productos">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SELECCIÓN PARA TI</p>
+                    <h2>PRODUCTOS <span>DESTACADOS</span></h2>
+                    <p class="muted">Calidad, comodidad y rendimiento para cada disciplina.</p>
+                </div>
+                <div class="product-tools"><input id="searchInput" type="search" placeholder="Buscar producto..."
+                        aria-label="Buscar producto"><select id="sortSelect" aria-label="Ordenar productos">
+                        <option value="featured">Destacados</option>
+                        <option value="low">Menor precio</option>
+                        <option value="high">Mayor precio</option>
+                    </select></div>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+            <p class="empty-state" id="emptyState" hidden>No encontramos productos con esa búsqueda.</p>
+        </section>
+
+        <section class="promo" id="ofertas">
+            <div>
+                <p class="eyebrow">PROMOCIONES ESPECIALES</p>
+                <h2>SUBE EL NIVEL<br><span>DE TU JUEGO.</span></h2>
+                <p>Descubre productos seleccionados con precios especiales por tiempo limitado.</p><a href="#productos"
+                    class="primary-btn">COMPRAR AHORA ↗</a>
+            </div>
+            <div class="promo-stamp">-20%<small>EN PRODUCTOS<br>SELECCIONADOS</small></div>
+        </section>
+
+        <section class="about-section" id="nosotros">
+            <p class="eyebrow">CONÓCENOS</p>
+            <h2>HECHOS PARA QUIENES<br><span>NO SE DETIENEN.</span></h2>
+            <div class="about-cards">
+                <article><b>01 / CALIDAD</b>
+                    <p>Seleccionamos productos pensados para acompañarte en cada reto.</p>
+                </article>
+                <article><b>02 / ACTITUD</b>
+                    <p>Creemos en la disciplina, la pasión y el trabajo constante.</p>
+                </article>
+                <article><b>03 / MOVIMIENTO</b>
+                    <p>Queremos que encuentres lo que necesitas para seguir avanzando.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contacto">
+            <div>
+                <p class="eyebrow">¿TIENES PREGUNTAS?</p>
+                <h2>HABLEMOS DE<br><span>DEPORTE.</span></h2>
+                <p class="muted">Escríbenos y te ayudaremos a encontrar el producto ideal.</p>
+            </div>
+            <form id="contactForm">
+                <label>Nombre<input name="name" required placeholder="Tu nombre"></label>
+                <label>Correo electrónico<input name="email" type="email" required
+                        placeholder="correo@ejemplo.com"></label>
+                <label>Mensaje<textarea name="message" required rows="4"
+                        placeholder="¿En qué podemos ayudarte?"></textarea></label>
+                <button class="primary-btn" type="submit">ENVIAR MENSAJE ↗</button>
+                <p id="formMessage" class="form-message" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer><a class="brand" href="#inicio">▰ E<span>DEPORTES</span></a>
+        <p>© <span id="year"></span> E-Deportes. Todos los derechos reservados.</p><a href="#inicio">Volver arriba ↑</a>
+    </footer>
+
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+        <div class="cart-head">
+            <h2>Tu carrito</h2><button id="closeCart" class="icon-btn" aria-label="Cerrar carrito">✕</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <p class="muted">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+        <button class="primary-btn checkout-btn" id="checkoutBtn">FINALIZAR COMPRA ↗</button>
+        <p class="cart-note">La compra es una demostración; no se procesan pagos reales.</p>
+    </aside>
+    <script src="script.js"></script>
+</body>
+
+</html>
