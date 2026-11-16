@@ -8,6 +8,7 @@
     --muted: #a4ada4;
     --lime: #a8f000;
     --line: #2a332b
+
 }
 
 * {
@@ -16,7 +17,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px
+    scroll-padding-top: 20px
 }
 
 body {
@@ -69,8 +70,11 @@ textarea {
 
 .brand-mark,
 .brand span {
-    color: var(--lime)
+      color: #000000;
 }
+.brand img {
+    filter: brightness(0);
+} 
 
 nav {
     display: flex;
